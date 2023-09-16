@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  background: #fff;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  margin: 16px 12px;
+}
+
+header a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+}
+
+header a:hover {
+  transition: all 0.5s;
+  color: #888;
+}
+
+main {
+  padding: 0 18px;
+}
+
+article {
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+ul {
+  padding-left: 25px;
+  margin: 8px 0;
+}
+
+ul > li {
+  padding: 5px 0;
+}
+
+h1 {
+  font-size: 2.25em;
+  letter-spacing: -1.75px;
+  margin: 0 0 8px 0;
+}
+
+h2.subheading {
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: -0.45px;
+  margin: 0 0 32px 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+a {
+  color: #333;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.3rem;
+  font-size: 1.0rem;
+  margin: 20px 0;
+}
+
+.container {
+  max-width: 768px;
+  margin: auto;
+}
+
+.theme-toggle-container {
+  transform: scale(0.9);
+  transform-origin: center;
+}
+
+.theme-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 0px solid;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s; 
+  background: transparent;
+}
+
+.hex {
+  position: absolute;
+  width: 104px;
+  height: 66px;
+  background: #333;
+  border-radius: 10px;
+  transform: scale(0.3);
+}
+
+.hex:before,
+.hex:after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  border-top: inherit;
+  border-bottom: inherit;
+  background: inherit;
+  content: '';
+}
+
+.hex:before {
+  transform: rotate(60deg);
+}
+
+.hex:after {
+  transform: rotate(-60deg);
+}
+
+.light {
+  background: #fff;
+  color: #333;
+}
+
+.light .hex {
+  background: #333;
+}
+
+.light a {
+  color: #333;
+}
+
+.light header {
+  border-color: #333;
+}
+
+.dark {
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.dark .hex {
+  background: #fff;
+}
+
+.dark a {
+  color: #fff;
+}
+
+.dark header {
+  border-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0f0f0f;
+    color: #fff;
+  }
+
+  .hex {
+    background: #fff;
+  }
+
+  a {
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  header {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2.subheading {
+    font-size: 1.35em;
+  }
+
+  .theme-toggle-container {
+    right: 20px;
+    transform: scale(1);
+  }
+}
